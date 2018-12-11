@@ -1,9 +1,7 @@
 package com.cit.service.subscriber;
 
-import 
-org.eclipse.paho.client.mqttv3.IMqttActionListener;
-import 
-org.eclipse.paho.client.mqttv3.IMqttToken;
+import org.eclipse.paho.client.mqttv3.IMqttActionListener;
+import org.eclipse.paho.client.mqttv3.IMqttToken;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

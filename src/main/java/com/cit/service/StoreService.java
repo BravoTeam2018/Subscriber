@@ -69,8 +69,7 @@ public class StoreService implements ApplicationListener<AlertEvent>{
 
     @Override
     public void onApplicationEvent(AlertEvent event) {
-
-        log.info("hello world");
+        //log.info("hello world");
         alerts.add(event.getAlert());
     }
 }
