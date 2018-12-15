@@ -5,20 +5,21 @@
   </h1>
   <img src="/assets/images/TeamBravo.jpeg" width="500" class="img-rounded img-responsive"  >
 </div>
-<h2>Search by the following: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Location</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">User</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Panel</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Severity</a></h2>
-  </li>
-</ul>
 
+  <h2>Search by the following: </h2>
+
+    <form> Location:<br><input type="text" name="Location" id="Location"></form>
+    <input onclick="window.location.href = '/server/api/v1/alerts/location/'.concat(document.getElementById('Location').value);" type="submit" value="Submit request"/>
+
+    <form> User:<br><input type="text" name="User" id="User"></form>
+    <input onclick="window.location.href = '/server/api/v1/alerts/user/'.concat(document.getElementById('User').value);" type="submit" value="Submit request"/>
+
+    <form> Panel ID:<br><input type="text" name="Panel" id="Panel"></form>
+    <input onclick="window.location.href = '/server/api/v1/alerts/panel/'.concat(document.getElementById('Panel').value);" type="submit" value="Submit request"/>
+
+    <form> Severity:<br><input type="text" name="Severity" id="Severity"></form>
+    <input onclick="window.location.href ='/server/api/v1/alerts/severity/'.concat(document.getElementById('Severity').value);" type="submit" value="Submit request"/>
+    <button type="button" (click)=onSubmit()> click me!</button>
+
+  <h2><a target="_blank" rel="noopener" href="/server/api/v1/alerts/">Raw</a></h2>
 <router-outlet></router-outlet>
