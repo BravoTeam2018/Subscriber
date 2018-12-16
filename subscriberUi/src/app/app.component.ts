@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {AlertService} from "../service/alert.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -8,13 +9,19 @@ import {AlertService} from "../service/alert.service";
 })
 export class AppComponent{
   title = 'subscriberUi';
-  constructor(private alertService:AlertService){
+  locationModel:any;
+  severityModel:any;
+  userModel:any;
+  panelModel:any;
+  url:string;
+  constructor(private alertService:AlertService, private router:Router){
 
   }
 
-  onSubmit(){
-    console.log("hi");
-    this.alertService.getAlerts('/server/api/v1/alerts/').subscribe();
+  onSubmit(formValues:string,route:string){
+    console.log(formValues);
+    this.url = route.concat(formValues);
+    this.router.navigate([this.url])
   }
 
 }

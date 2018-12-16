@@ -3,23 +3,35 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <img src="/assets/images/TeamBravo.jpeg" width="500" class="img-rounded img-responsive"  >
+  <img src="/assets/images/TeamBravo.jpeg" width="500" class="img-rounded img-responsive" >
 </div>
 
   <h2>Search by the following: </h2>
+  <div class="form-group">
+    <form #locationForm="ngForm">
+      <label for="Location"> Location:  </label><br>
+      <input [(ngModel)]="locationModel" name="Location" type="text" id="Location" class="form-control"><br>
+      <button class="button" (click)="onSubmit(locationForm.value.Location,'/location/');false">Search</button>
+    </form>
 
-    <form> Location:<br><input type="text" name="Location" id="Location"></form>
-    <input onclick="window.location.href = '/server/api/v1/alerts/location/'.concat(document.getElementById('Location').value);" type="submit" value="Submit request"/>
+    <form #userForm="ngForm">
+      <label for="User"> User:  </label><br>
+      <input (ngModel)="userModel" name="User" type="text" id="User"><br>
+      <button class="button" (click)="onSubmit(userForm.value.User,'/user/');false">Search</button>
+    </form>
 
-    <form> User:<br><input type="text" name="User" id="User"></form>
-    <input onclick="window.location.href = '/server/api/v1/alerts/user/'.concat(document.getElementById('User').value);" type="submit" value="Submit request"/>
+    <form #panelForm="ngForm">
+      <label for="Panel"> Panel:  </label><br>
+      <input (ngModel)="panelModel" name="Panel" type="text" id="Panel"><br>
+      <button class="button" (click)="onSubmit(panelForm.value.Panel,'/panel/');false">Search</button>
+    </form>
 
-    <form> Panel ID:<br><input type="text" name="Panel" id="Panel"></form>
-    <input onclick="window.location.href = '/server/api/v1/alerts/panel/'.concat(document.getElementById('Panel').value);" type="submit" value="Submit request"/>
+    <form #severityForm="ngForm">
+      <label  for="Severity"> Severity:  </label><br>
+      <input (ngModel)="severityModel" name="Severity" type="text" id="Severity"   ><br>
+      <button class="button" (click)="onSubmit(severityForm.value.Severity,'/severity/');false">Search</button>
+    </form>
+  </div>
 
-    <form> Severity:<br><input type="text" name="Severity" id="Severity"></form>
-    <input onclick="window.location.href ='/server/api/v1/alerts/severity/'.concat(document.getElementById('Severity').value);" type="submit" value="Submit request"/>
-    <button type="button" (click)=onSubmit()> click me!</button>
-
-  <h2><a target="_blank" rel="noopener" href="/server/api/v1/alerts/">Raw</a></h2>
+  <h2><a class="button" rel="noopener" (click)="onSubmit('','/raw/');false">Raw</a></h2>
 <router-outlet></router-outlet>

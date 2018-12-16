@@ -12,6 +12,9 @@ import {UserComponent} from "../component/alerts/user-component";
 import {Error404Component} from "../errors/404-component";
 import {RawComponent} from "../component/alerts/raw-component";
 import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import {ModalService} from "../service/modal/modal-service";
+import {ModalComponent} from "../component/modal/modal-component";
 
 
 @NgModule({
@@ -23,14 +26,18 @@ import {HttpClientModule} from "@angular/common/http";
     SeverityComponent,
     UserComponent,
     Error404Component,
-    RawComponent
+    RawComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [AlertService],
+  providers: [
+    AlertService,
+    ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,14 +5,16 @@ import {LocationComponent} from "../component/alerts/location-component";
 import {PanelComponent} from "../component/alerts/panel-component";
 import {SeverityComponent} from "../component/alerts/severity-component";
 import {Error404Component} from "../errors/404-component";
+import {RawComponent} from "../component/alerts/raw-component";
 
 
 const routes: Routes = [
-  {path: 'user/:user',component: UserComponent },
-  {path: 'location/:location',component: LocationComponent},
+  {path: 'user/:user',component:UserComponent },
+  {path: 'location/:location',component:LocationComponent},
   {path: 'panel/:panel', component:PanelComponent},
-  {path: 'severity/:sev', component: SeverityComponent},
-  {path: '404', component: Error404Component}
+  {path: 'severity/:sev', component:SeverityComponent},
+  {path: 'raw', component:RawComponent},
+  {path: '404', component:Error404Component}
 ];
 
 @NgModule({
