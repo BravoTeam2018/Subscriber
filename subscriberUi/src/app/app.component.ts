@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {AlertService} from "../service/alert.service";
 import {Router} from "@angular/router";
+import {SubscribeService} from "../service/subscribe/subscribe-service";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,12 @@ export class AppComponent{
   userModel:any;
   panelModel:any;
   url:string;
-  constructor(private alertService:AlertService, private router:Router){
+  mqttConnected:any;
+
+  constructor(private alertService:AlertService,
+              private router:Router,
+              private subscriber:SubscribeService
+  ){
 
   }
 
@@ -24,4 +30,11 @@ export class AppComponent{
     this.router.navigate([this.url])
   }
 
+  subscribeMqtt(){
+    this.subscriber.subscribeMqtt().subscribe()
+  }
+
+  connected(){
+    //this.subscriber.isSuscribed().subscribe((mqttConnected:boolean)=>{this.connected = mqttConnected})
+  }
 }

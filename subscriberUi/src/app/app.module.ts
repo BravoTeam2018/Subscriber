@@ -15,12 +15,12 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {ModalService} from "../service/modal/modal-service";
 import {ModalComponent} from "../component/modal/modal-component";
+import {SubscribeService} from "../service/subscribe/subscribe-service";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlertListComponent,
     LocationComponent,
     PanelComponent,
     SeverityComponent,
@@ -37,7 +37,10 @@ import {ModalComponent} from "../component/modal/modal-component";
   ],
   providers: [
     AlertService,
-    ModalService],
+    ModalService,
+    AlertListComponent,
+    SubscribeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

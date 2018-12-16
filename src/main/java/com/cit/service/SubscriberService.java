@@ -26,9 +26,12 @@ public class SubscriberService {
         this.subscriber = new MqttSubscribe(applicationEventPublisher);
     }
 
-    @Autowired
     public void subscribe(){
         subscriber.setClientId(GenerteId.generateClientId());
         subscriber.connect(mqttBroker,mqttTopic);
+    }
+
+    public boolean connected(){
+        return subscriber.isConnected();
     }
 }

@@ -12,3 +12,779 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 	at org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:56)
 	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:100)
 	... 1 common frames omitted
+"2018-12-16 21:05:33 [main] INFO  com.cit.App - Starting App on USENNOLANJ5L2C with PID 27932 (C:\Users\nolanj5\IdeaProjects\Subscriber\target\classes started by nolanj5 in C:\Users\nolanj5\IdeaProjects\Subscriber)
+""2018-12-16 21:05:33 [main] DEBUG com.cit.App - Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+""2018-12-16 21:05:33 [main] INFO  com.cit.App - No active profile set, falling back to default profiles: default
+""2018-12-16 21:05:33 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2f112965: startup date [Sun Dec 16 21:05:33 GMT 2018]; root of context hierarchy
+""2018-12-16 21:05:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8084 (http)
+""2018-12-16 21:05:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2018-12-16 21:05:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+""2018-12-16 21:05:36 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_191\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\avs\bin;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\EMC\;C:\Program Files\Dell\Dell Data Protection\Encryption\;C:\Program Files\Git\cmd;C:\Python27\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn;C:\Program Files\Sqlite\sqlite-tools-win32-x86-3260000;C:\Users\nolanj5\AppData\Local\Microsoft\WindowsApps;c:\adiosNT;C:\adiosNT\lib;C:\perl\bin;C:\Users\nolanj5\AppData\Roaming\npm;C:\Users\nolanj5\AppData\Local\Yarn\bin;.]
+""2018-12-16 21:05:36 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""2018-12-16 21:05:36 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+""2018-12-16 21:05:36 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2018-12-16 21:05:36 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2018-12-16 21:05:36 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2018-12-16 21:05:36 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+""2018-12-16 21:05:36 [main] WARN  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public void com.cit.service.SubscriberService.subscribe()
+""2018-12-16 21:05:36 [main] INFO  com.cit.service.subscriber.GenerteId - new client ID is: W1IcCSNQfAu5UhoJd-NZ
+""2018-12-16 21:05:36 [main] INFO  c.c.service.subscriber.MqttSubscribe - W1IcCSNQfAu5UhoJd-NZ
+""2018-12-16 21:05:37 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - Connection made
+""2018-12-16 21:05:37 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2018-12-16 21:05:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8084 (http) with context path ''
+""2018-12-16 21:05:37 [main] INFO  com.cit.App - Started App in 4.862 seconds (JVM running for 6.85)
+""2018-12-16 21:05:40 [http-nio-8084-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2018-12-16 21:05:47 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null subscribed to the validation.alerts.bravo topic
+""2018-12-16 21:08:46 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544994267724,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994039125,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:09:07 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544994289332,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994267724,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:09:42 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "High",
+  "title" : "Possible Cloned Access Card",
+  "description" : "An access-card has been used that was very recently used in another location, indicating that it is unlikely to be the same card-holder",
+  "currentEvent" : {
+    "timestamp" : 1544994323429,
+    "cardId" : "4407775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "580ddc98-0db9-473d-a721-348f353f1d2b",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.884827,
+        "longitude" : -8.533947
+      },
+      "altitude" : 100,
+      "relativeLocation" : "CIT Library West Wing Entry Doors, Cork, Ireland"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994202807,
+    "cardId" : "4407775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "d50f91a5-6f2b-4a70-ab6c-e0fec58c866e",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.886403,
+        "longitude" : -8.53358
+      },
+      "altitude" : 90,
+      "relativeLocation" : "Old Tyco Building, Main Door, Cork, Ireland"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:09:42 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "High",
+  "title" : "Possible Cloned Access Card",
+  "description" : "An access-card has been used that was very recently used in another location, indicating that it is unlikely to be the same card-holder",
+  "currentEvent" : {
+    "timestamp" : 1544821524052,
+    "cardId" : "4407775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "5e11d5ee-7715-4080-bfe6-25c66d8ce821",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 37.428637,
+        "longitude" : -122.165954
+      },
+      "altitude" : 260,
+      "relativeLocation" : "Stanford Department of Economics, 1st Floor, West Wing, CA, USA"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994323429,
+    "cardId" : "4407775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "580ddc98-0db9-473d-a721-348f353f1d2b",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.884827,
+        "longitude" : -8.533947
+      },
+      "altitude" : 100,
+      "relativeLocation" : "CIT Library West Wing Entry Doors, Cork, Ireland"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:09:42 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544994324173,
+    "cardId" : "4407775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "580ddc98-0db9-473d-a721-348f353f1d2b",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.884827,
+        "longitude" : -8.533947
+      },
+      "altitude" : 100,
+      "relativeLocation" : "CIT Library West Wing Entry Doors, Cork, Ireland"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544821524052,
+    "cardId" : "4407775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "5e11d5ee-7715-4080-bfe6-25c66d8ce821",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 37.428637,
+        "longitude" : -122.165954
+      },
+      "altitude" : 260,
+      "relativeLocation" : "Stanford Department of Economics, 1st Floor, West Wing, CA, USA"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:09:42 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544994264265,
+    "cardId" : "6607775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "5e11d5ee-7715-4080-bfe6-25c66d8ce821",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 37.428637,
+        "longitude" : -122.165954
+      },
+      "altitude" : 260,
+      "relativeLocation" : "Stanford Department of Economics, 1st Floor, West Wing, CA, USA"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : null
+}
+""2018-12-16 21:09:42 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "High",
+  "title" : "Possible Cloned Access Card",
+  "description" : "An access-card has been used that was very recently used in another location, indicating that it is unlikely to be the same card-holder",
+  "currentEvent" : {
+    "timestamp" : 1544994324339,
+    "cardId" : "6607775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "7907775e-15ac-415f-a99c-e978856c8ec0",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.884969,
+        "longitude" : -8.533235
+      },
+      "altitude" : 100,
+      "relativeLocation" : "CIT Library North Ground Exit, Cork, Ireland"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994264265,
+    "cardId" : "6607775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "5e11d5ee-7715-4080-bfe6-25c66d8ce821",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 37.428637,
+        "longitude" : -122.165954
+      },
+      "altitude" : 260,
+      "relativeLocation" : "Stanford Department of Economics, 1st Floor, West Wing, CA, USA"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:09:42 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544994314480,
+    "cardId" : "3307775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "5e11d5ee-7715-4080-bfe6-25c66d8ce821",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 37.428637,
+        "longitude" : -122.165954
+      },
+      "altitude" : 260,
+      "relativeLocation" : "Stanford Department of Economics, 1st Floor, West Wing, CA, USA"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : null
+}
+""2018-12-16 21:09:42 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "High",
+  "title" : "Possible Cloned Access Card",
+  "description" : "An access-card has been used that was very recently used in another location, indicating that it is unlikely to be the same card-holder",
+  "currentEvent" : {
+    "timestamp" : 1544994324505,
+    "cardId" : "3307775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "5ae6dbcd-9166-4d80-99d9-069e69bead15",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 37.428638,
+        "longitude" : -122.165955
+      },
+      "altitude" : 280,
+      "relativeLocation" : "Stanford Department of Economics, 3rd Floor, West Wing, CA, USA"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994314480,
+    "cardId" : "3307775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "5e11d5ee-7715-4080-bfe6-25c66d8ce821",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 37.428637,
+        "longitude" : -122.165954
+      },
+      "altitude" : 260,
+      "relativeLocation" : "Stanford Department of Economics, 1st Floor, West Wing, CA, USA"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:09:42 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "High",
+  "title" : "Possible Cloned Access Card",
+  "description" : "An access-card has been used that was very recently used in another location, indicating that it is unlikely to be the same card-holder",
+  "currentEvent" : {
+    "timestamp" : 1544994304554,
+    "cardId" : "3307775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "5e11d5ee-7715-4080-bfe6-25c66d8ce821",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 37.428637,
+        "longitude" : -122.165954
+      },
+      "altitude" : 260,
+      "relativeLocation" : "Stanford Department of Economics, 1st Floor, West Wing, CA, USA"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994324505,
+    "cardId" : "3307775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "5ae6dbcd-9166-4d80-99d9-069e69bead15",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 37.428638,
+        "longitude" : -122.165955
+      },
+      "altitude" : 280,
+      "relativeLocation" : "Stanford Department of Economics, 3rd Floor, West Wing, CA, USA"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:09:43 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544994324593,
+    "cardId" : "3307775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "5ae6dbcd-9166-4d80-99d9-069e69bead15",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 37.428638,
+        "longitude" : -122.165955
+      },
+      "altitude" : 280,
+      "relativeLocation" : "Stanford Department of Economics, 3rd Floor, West Wing, CA, USA"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994304554,
+    "cardId" : "3307775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "5e11d5ee-7715-4080-bfe6-25c66d8ce821",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 37.428637,
+        "longitude" : -122.165954
+      },
+      "altitude" : 260,
+      "relativeLocation" : "Stanford Department of Economics, 1st Floor, West Wing, CA, USA"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:09:43 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544994324659,
+    "cardId" : "7707775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "7907775e-15ac-415f-a99c-e978856c8ec0",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.884969,
+        "longitude" : -8.533235
+      },
+      "altitude" : 100,
+      "relativeLocation" : "CIT Library North Ground Exit, Cork, Ireland"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : null
+}
+""2018-12-16 21:09:43 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544994204703,
+    "cardId" : "5507775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "580ddc98-0db9-473d-a721-348f353f1d2b",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.884827,
+        "longitude" : -8.533947
+      },
+      "altitude" : 100,
+      "relativeLocation" : "CIT Library West Wing Entry Doors, Cork, Ireland"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : null
+}
+""2018-12-16 21:09:43 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544994324720,
+    "cardId" : "5507775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "580ddc98-0db9-473d-a721-348f353f1d2b",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.884827,
+        "longitude" : -8.533947
+      },
+      "altitude" : 100,
+      "relativeLocation" : "CIT Library West Wing Entry Doors, Cork, Ireland"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994204703,
+    "cardId" : "5507775e-15ac-415f-a99c-e978856c8ec0",
+    "panelId" : "580ddc98-0db9-473d-a721-348f353f1d2b",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.884827,
+        "longitude" : -8.533947
+      },
+      "altitude" : 100,
+      "relativeLocation" : "CIT Library West Wing Entry Doors, Cork, Ireland"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:13:50 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544994571729,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994289332,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:15:31 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544994673262,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994571729,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:15:44 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544994685864,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994673262,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:16:16 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544994717743,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994685864,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:16:28 [MQTT Call: W1IcCSNQfAu5UhoJd-NZ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544994730150,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994717743,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:24:51 [main] INFO  com.cit.App - Starting App on USENNOLANJ5L2C with PID 23788 (C:\Users\nolanj5\IdeaProjects\Subscriber\target\classes started by nolanj5 in C:\Users\nolanj5\IdeaProjects\Subscriber)
+""2018-12-16 21:24:51 [main] DEBUG com.cit.App - Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+""2018-12-16 21:24:51 [main] INFO  com.cit.App - No active profile set, falling back to default profiles: default
+""2018-12-16 21:24:51 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c9d0b9d: startup date [Sun Dec 16 21:24:51 GMT 2018]; root of context hierarchy
+""2018-12-16 21:24:55 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8084 (http)
+""2018-12-16 21:24:55 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2018-12-16 21:24:55 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+""2018-12-16 21:24:55 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_191\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\avs\bin;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\EMC\;C:\Program Files\Dell\Dell Data Protection\Encryption\;C:\Program Files\Git\cmd;C:\Python27\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn;C:\Program Files\Sqlite\sqlite-tools-win32-x86-3260000;C:\Users\nolanj5\AppData\Local\Microsoft\WindowsApps;c:\adiosNT;C:\adiosNT\lib;C:\perl\bin;C:\Users\nolanj5\AppData\Roaming\npm;C:\Users\nolanj5\AppData\Local\Yarn\bin;.]
+""2018-12-16 21:24:55 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""2018-12-16 21:24:55 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+""2018-12-16 21:24:55 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2018-12-16 21:24:55 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2018-12-16 21:24:55 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2018-12-16 21:24:55 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+""2018-12-16 21:24:55 [main] WARN  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public void com.cit.service.SubscriberService.subscribe()
+""2018-12-16 21:24:55 [main] INFO  com.cit.service.subscriber.GenerteId - new client ID is: EPBcGGFr0VvhG9pur-uQ
+""2018-12-16 21:24:55 [main] INFO  c.c.service.subscriber.MqttSubscribe - EPBcGGFr0VvhG9pur-uQ
+""2018-12-16 21:24:56 [MQTT Call: EPBcGGFr0VvhG9pur-uQ] INFO  c.c.service.subscriber.MqttSubscribe - Connection made
+""2018-12-16 21:24:56 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2018-12-16 21:24:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8084 (http) with context path ''
+""2018-12-16 21:24:56 [main] INFO  com.cit.App - Started App in 5.96 seconds (JVM running for 8.695)
+""2018-12-16 21:24:56 [http-nio-8084-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2018-12-16 21:25:06 [MQTT Call: EPBcGGFr0VvhG9pur-uQ] INFO  c.c.service.subscriber.MqttSubscribe - null subscribed to the validation.alerts.bravo topic
+""2018-12-16 21:28:26 [MQTT Call: EPBcGGFr0VvhG9pur-uQ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544995447805,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544994730150,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:28:31 [MQTT Call: EPBcGGFr0VvhG9pur-uQ] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544995453056,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544995447805,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 21:34:05 [main] INFO  com.cit.App - Starting App on USENNOLANJ5L2C with PID 20756 (C:\Users\nolanj5\IdeaProjects\Subscriber\target\classes started by nolanj5 in C:\Users\nolanj5\IdeaProjects\Subscriber)
+""2018-12-16 21:34:05 [main] DEBUG com.cit.App - Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+""2018-12-16 21:34:05 [main] INFO  com.cit.App - No active profile set, falling back to default profiles: default
+""2018-12-16 21:34:05 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2ddc8ecb: startup date [Sun Dec 16 21:34:05 GMT 2018]; root of context hierarchy
+""2018-12-16 21:34:08 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8084 (http)
+""2018-12-16 21:34:08 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2018-12-16 21:34:08 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+""2018-12-16 21:34:08 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_191\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\avs\bin;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\EMC\;C:\Program Files\Dell\Dell Data Protection\Encryption\;C:\Program Files\Git\cmd;C:\Python27\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn;C:\Program Files\Sqlite\sqlite-tools-win32-x86-3260000;C:\Users\nolanj5\AppData\Local\Microsoft\WindowsApps;c:\adiosNT;C:\adiosNT\lib;C:\perl\bin;C:\Users\nolanj5\AppData\Roaming\npm;C:\Users\nolanj5\AppData\Local\Yarn\bin;.]
+""2018-12-16 21:34:09 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""2018-12-16 21:34:09 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+""2018-12-16 21:34:09 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+""2018-12-16 21:34:09 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+""2018-12-16 21:34:09 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+""2018-12-16 21:34:09 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+""2018-12-16 21:34:10 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+""2018-12-16 21:34:10 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8084 (http) with context path ''
+""2018-12-16 21:34:10 [main] INFO  com.cit.App - Started App in 5.482 seconds (JVM running for 7.17)
+""2018-12-16 21:34:10 [http-nio-8084-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+""2018-12-16 21:39:56 [http-nio-8084-exec-4] INFO  com.cit.service.subscriber.GenerteId - new client ID is: _QSeKWGx-8evA5lHNqFb
+""2018-12-16 21:39:56 [http-nio-8084-exec-4] INFO  c.c.service.subscriber.MqttSubscribe - _QSeKWGx-8evA5lHNqFb
+""2018-12-16 21:39:56 [MQTT Call: _QSeKWGx-8evA5lHNqFb] INFO  c.c.service.subscriber.MqttSubscribe - Connection made
+""2018-12-16 21:40:06 [MQTT Call: _QSeKWGx-8evA5lHNqFb] INFO  c.c.service.subscriber.MqttSubscribe - null subscribed to the validation.alerts.bravo topic
+""2018-12-16 21:55:18 [MQTT Call: _QSeKWGx-8evA5lHNqFb] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544997060421,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544995453056,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  }
+}
+""2018-12-16 22:14:47 [MQTT Call: _QSeKWGx-8evA5lHNqFb] INFO  c.c.service.subscriber.MqttSubscribe - null received validation.alerts.bravo: {
+  "severity" : "Low",
+  "title" : "Regular access event. No issue found",
+  "description" : "Regular access event. No issue found",
+  "currentEvent" : {
+    "timestamp" : 1544998229036,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  },
+  "previousEvent" : {
+    "timestamp" : 1544997060421,
+    "cardId" : "246609c6-ce9c-41a2-b64d-ba8066a376af",
+    "panelId" : "123b33e8-63b9-4c04-838b-f65aacbeab42",
+    "location" : {
+      "coordinates" : {
+        "latitude" : 51.52528,
+        "longitude" : -0.133313
+      },
+      "altitude" : 150,
+      "relativeLocation" : "UCL, Department of Physics & Astronomy Main Entrance, London, UK"
+    },
+    "accessAllowed" : true
+  }
+}
+"

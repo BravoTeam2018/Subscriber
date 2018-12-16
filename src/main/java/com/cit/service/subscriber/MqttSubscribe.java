@@ -20,6 +20,7 @@ public class MqttSubscribe implements IMqttSubscribe{
     private String name;
     private String clientId = null;
     private MqttAsyncClient client;
+    private String mqttBroker;
     private MemoryPersistence memoryPersistence;
     private IMqttToken connectToken;
     private IMqttToken subscribeToken;
@@ -50,6 +51,7 @@ public class MqttSubscribe implements IMqttSubscribe{
     {
         try {
             this.topic = mqttTopic;
+            this.mqttBroker = broker;
             MqttConnectOptions options = new MqttConnectOptions();
             memoryPersistence = new MemoryPersistence();
             if (this.clientId == null){
@@ -80,6 +82,9 @@ public class MqttSubscribe implements IMqttSubscribe{
     public void connectionLost(Throwable cause) {
         // The MQTT client lost the connection, need to add reconnect...
         log.error("Threw an Exception in MqttSubscribe::connectionLost, full stack trace follows:",cause);
+        clientId = null;
+        connect(mqttBroker,topic);
+
     }
 
     @Override

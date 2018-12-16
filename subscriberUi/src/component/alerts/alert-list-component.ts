@@ -1,17 +1,11 @@
-import {Component,OnInit} from "@angular/core";
+import {Component, Input, OnInit} from "@angular/core";
 import {AlertService} from "../../service/alert.service";
-import {IAlert} from "../../model/alert-model";
 
 @Component({
   selector : 'alert-lisr',
   template : `
     <div>
-      <div *ngFor="let alert of alerts">
-        <p>{{alert.severity}}</p> 
-        <p *ngFor="let currentEvent of alert.currentEvent"> 
-          {{currentEvent.panelId}}
-        </p>
-      </div>
+      <p>{{alerts}}</p>
     </div>
     \`,
     })
@@ -19,7 +13,7 @@ import {IAlert} from "../../model/alert-model";
 })
 
 export class AlertListComponent implements OnInit{
-  alerts:IAlert[];
+  @Input('alert') alerts;
   constructor(private alertService : AlertService){
   }
 
