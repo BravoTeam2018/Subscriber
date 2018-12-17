@@ -148,9 +148,6 @@ public class MqttSubscribe implements IMqttSubscribe{
         AlertEvent alertEvent = new AlertEvent(this,alert);
         applicationEventPublisher.publishEvent(alertEvent);
 
-        if (keyValue.length != 3) {
-            return;
-        }
     }
 
     /**
