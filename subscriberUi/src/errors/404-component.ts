@@ -18,6 +18,7 @@ export class Error404Component{
   constructor(private router:Router) {
   }
 
+
   goBack(){
     this.router.navigate(["/home"])
   }
