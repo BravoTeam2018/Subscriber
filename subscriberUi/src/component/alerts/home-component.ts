@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit{
   panelModel:any;
   url:string;
   message:string;
-  subscribed:boolean;
+  subscribed:boolean = false;
 
   constructor(private alertService:AlertService,
               private router:Router,
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit{
       this.openModal('custom-modal-2')
     }else{
       this.message="Subscribing";
-      this.openModal('custom-modal-2')
+      this.openModal('custom-modal-2');
       this.subscriber.subscribeMqtt()
     }
   }
