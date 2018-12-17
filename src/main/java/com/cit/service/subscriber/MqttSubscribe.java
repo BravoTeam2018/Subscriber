@@ -147,7 +147,6 @@ public class MqttSubscribe implements IMqttSubscribe{
         Alert alert = JsonAlertToModelMapper.toModelObject(messageText);
         AlertEvent alertEvent = new AlertEvent(this,alert);
         applicationEventPublisher.publishEvent(alertEvent);
-
     }
 
     /**
