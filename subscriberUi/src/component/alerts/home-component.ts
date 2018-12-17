@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AlertService} from "../../service/alert.service";
 import {Router} from "@angular/router";
 import {SubscribeService} from "../../service/subscribe/subscribe-service";
@@ -8,13 +8,14 @@ import {ModalService} from "../../service/modal/modal-service";
   selector: 'app-root',
   templateUrl: './home-component.html',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   locationModel:any;
   severityModel:any;
   userModel:any;
   panelModel:any;
   url:string;
   message:string;
+  subscribed:boolean;
 
   constructor(private alertService:AlertService,
               private router:Router,
@@ -24,16 +25,20 @@ export class HomeComponent {
   }
 
   onSubmit(formValues:string,route:string){
-    this.url = route.concat(formValues);
-    this.router.navigate([this.url])
+    if(formValues != null) {
+      this.url = route.concat(formValues);
+      this.router.navigate([this.url])
+    }
   }
 
   subscribeMqtt(){
-    if (this.subscriber.isSuscribed()){
+    this.subscriber.isSuscribed().subscribe((subscribed:boolean)=>{this.subscribed = subscribed});
+    if (this.subscribed){
       this.message = "Already Subscribed!";
       this.openModal('custom-modal-2')
     }else{
       this.message="Subscribing";
+      this.openModal('custom-modal-2')
       this.subscriber.subscribeMqtt()
     }
   }
@@ -46,4 +51,7 @@ export class HomeComponent {
     this.modalService.close(id);
   }
 
+  ngOnInit(){
+    this.subscriber.isSuscribed().subscribe((subscribed:boolean)=>{this.subscribed = subscribed});
+  }
 }

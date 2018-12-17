@@ -11,12 +11,12 @@ export class SubscribeService {
   }
 
   subscribeMqtt():Observable<boolean>{
-    this.http.get<boolean>('/server/api/v1/subscriber/connect').subscribe()|| catchError(this.handleError<boolean>('getAlerts',));
+    this.http.get<boolean>('/server/api/v1/subscriber/connect').subscribe()|| catchError(this.handleError<boolean>('subscribeMqtt',));
     return
   }
 
   isSuscribed():Observable<boolean>{
-    return this.http.get<boolean>('/server/api/v1/subscriber/connected').pipe(catchError(this.handleError<boolean>('getAlerts',)))
+    return this.http.get<boolean>('/server/api/v1/subscriber/connected').pipe(catchError(this.handleError<boolean>('isSubscribed',)))
   }
 
   private handleError<T>(operation='operation',result?:T){
