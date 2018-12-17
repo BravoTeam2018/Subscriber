@@ -1,6 +1,8 @@
 package com.cit.controller;
 
 import com.cit.service.SubscriberService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SubscribeController {
     private SubscriberService subscriber;
+    private final Logger log = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired
     SubscribeController(SubscriberService subscriber){
        this.subscriber=subscriber;
    }
@@ -22,6 +24,12 @@ public class SubscribeController {
 
     @RequestMapping(value = "/connect")
     public void connect(){
-        subscriber.subscribe();
+        if (subscriber.connected()){
+            if (log.isInfoEnabled()){
+                log.info("spurious api call");
+            }
+        }else{
+            subscriber.subscribe();
+        }
     }
 }

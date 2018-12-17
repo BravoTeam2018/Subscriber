@@ -55,7 +55,7 @@ public class MqttSubscribe implements IMqttSubscribe{
             MqttConnectOptions options = new MqttConnectOptions();
             memoryPersistence = new MemoryPersistence();
             if (this.clientId == null){
-                this.clientId = MqttAsyncClient.generateClientId();
+                this.clientId = GenerteId.generateClientId();
                 if (log.isDebugEnabled()){
                     log.debug("Had to set clientID using generateClient");
                 }

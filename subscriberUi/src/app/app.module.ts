@@ -16,6 +16,7 @@ import {FormsModule} from "@angular/forms";
 import {ModalService} from "../service/modal/modal-service";
 import {ModalComponent} from "../component/modal/modal-component";
 import {SubscribeService} from "../service/subscribe/subscribe-service";
+import {HomeComponent} from "../component/alerts/home-component";
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {SubscribeService} from "../service/subscribe/subscribe-service";
     UserComponent,
     Error404Component,
     RawComponent,
-    ModalComponent
+    ModalComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

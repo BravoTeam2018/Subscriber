@@ -18,15 +18,19 @@ import {IAlert} from "../../model/alert-model";
       </h1>
       <h3>
         <div>
-          <table class="table table-inverse table-bordered">
+          <table class="table table-inverse table-bordered" border="1">
             <tr>
               <th>Severity</th>
               <th>Location</th>
+              <th>Time Stamp</th>
+              <th>Access Allowed</th>
               <!--<th>Description</th>-->
             </tr>
             <tr *ngFor="let alert of alerts">
               <td><a href="#" (click)="openModal('custom-modal-1',alert);false;">{{alert.severity}}</a></td>
               <td>  {{alert.currentEvent.location.relativeLocation}}</td>
+              <td>  {{alert.currentEvent.timestamp}}</td>
+              <td>{{alert.currentEvent.accessAllowed}}</td>
               <!--<td>  {{alert.description}}</td>-->
             </tr>
           </table>
@@ -47,17 +51,16 @@ export class LocationComponent implements OnInit{
               private modalService:ModalService){
   }
   cancel(){
-    this.router.navigate(["/"])
+    this.router.navigate(["/home"])
   }
 
   ngOnInit() {
-    console.log(this.route.snapshot.params['location']);
     this.url = '/server/api/v1/alerts/location/'.concat(this.route.snapshot.params['location']);
     this.alertService.getAlerts(this.url).subscribe((alerts:any[])=>{this.alerts = alerts});
   }
 
   openModal(id:string,alert){
-    this.alert=JSON.stringify(alert);
+    this.alert=JSON.stringify(alert, null, 2);
     //this.alert = alert.toString();
     console.log(JSON.stringify(alert));
     this.modalService.open(id);

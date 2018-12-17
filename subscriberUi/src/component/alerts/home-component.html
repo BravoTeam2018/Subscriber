@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>
+  <jw-modal id="custom-modal-2" class="hidden">
+    <p > {{message}} </p>
+    <button (click)="closeModal('custom-modal-2');">Close</button>
+  </jw-modal>
+  <div class="jw-modal-background"></div>
+</h1>
+<div class="form-group">
+  <h2>Search by the following: </h2>
+
+  <form #locationForm="ngForm">
+    <label for="Location"> Location:  </label><br>
+    <input [(ngModel)]="locationModel" name="Location" type="text" id="Location" class="form-control"><br>
+    <button class="button" (click)="onSubmit(locationForm.value.Location,'/location/');false">Search</button>
+  </form>
+
+  <form #userForm="ngForm">
+    <label for="User"> User:  </label><br>
+    <input (ngModel)="userModel" name="User" type="text" id="User"><br>
+    <button class="button" (click)="onSubmit(userForm.value.User,'/user/');false">Search</button>
+  </form>
+
+  <form #panelForm="ngForm">
+    <label for="Panel"> Panel:  </label><br>
+    <input (ngModel)="panelModel" name="Panel" type="text" id="Panel"><br>
+    <button class="button" (click)="onSubmit(panelForm.value.Panel,'/panel/');false">Search</button>
+  </form>
+
+  <form #severityForm="ngForm">
+    <label  for="Severity"> Severity:  </label><br>
+    <input (ngModel)="severityModel" name="Severity" type="text" id="Severity"   ><br>
+    <button class="button" (click)="onSubmit(severityForm.value.Severity,'/severity/');false">Search</button>
+  </form>
+
+  <h2><a class="button" rel="noopener" (click)="onSubmit('','/raw/');false">Raw</a></h2>
+</div>
+
+  <div id='myDIV'>
+    <h2><a class="btn btn-success btn-xs" rel="noopener" (click)="subscribeMqtt();false"  >Subscribe</a></h2>
+  </div>
+
+</body>
+</html>

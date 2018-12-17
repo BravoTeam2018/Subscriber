@@ -18,7 +18,7 @@ export class AlertService{
   getAlertsArray(url:string){
     this.http.get(url).subscribe((data:IAlert[]) => {
       this.data= data;
-    } )
+    });
     return this.data
   }
 
@@ -27,5 +27,10 @@ export class AlertService{
       console.error(error);
       return of(result as T);
     }
+  }
+
+  toString(alert:IAlert):string{
+    return ("Severity: " + alert.severity +
+            "CurrentEvent: " + alert.currentEvent.panelId);
   }
 }

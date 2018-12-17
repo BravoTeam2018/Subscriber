@@ -47,13 +47,11 @@ export class SeverityComponent implements OnInit{
               private modalService:ModalService){
   }
   cancel(){
-    this.router.navigate(["/"])
+    this.router.navigate(["/home"])
   }
 
   ngOnInit(){
-    console.log(this.route.snapshot.params['sev']);
     this.url = '/server/api/v1/alerts/severity/'.concat(this.route.snapshot.params['sev']);
-    console.log(this.url);
     this.alertService.getAlerts(this.url).subscribe((alerts:any[])=>{this.alerts = alerts});
   }
 

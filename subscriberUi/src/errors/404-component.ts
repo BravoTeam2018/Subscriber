@@ -1,17 +1,24 @@
 import { Component } from '@angular/core'
+import {Router} from "@angular/router";
 
 @Component({
   template: `
     <h1 class="errorMessage">404'd</h1>
+    <button type="button" class="button" (click)="goBack()" >Go Back</button>
   `,
   styles: [`
     .errorMessage { 
       margin-top:150px; 
       font-size: 170px;
       text-align: center; 
-    }`]
+    }
+  `]
 })
 export class Error404Component{
-  constructor() {
+  constructor(private router:Router) {
+  }
+
+  goBack(){
+    this.router.navigate(["/home"])
   }
 }

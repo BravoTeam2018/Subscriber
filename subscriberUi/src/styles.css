@@ -49,4 +49,153 @@ body.jw-modal-open {
 
   overflow: hidden;
 }
+/* typography */
 
+html {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+/* form formatting */
+form{
+  font-size: 1.7em;
+}
+
+/* table */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid black;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th, td {
+  padding: 20px;
+}
+
+thead th, tfoot th {
+  font-family: 'Rock Salt', cursive;
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #A9A9A9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #F8F8FF;
+}
+
+table {
+  background-color: #DCDCDC;
+}
+
+/* led's */
+
+.led-green {
+  margin: 0 auto;
+  width: 34px;
+  height: 34px;
+  background-color: #ABFF00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+  position: absolute;
+  right: 200px;
+  top: 50px;
+}
+.led-red {
+  margin: 0 auto;
+  width: 34px;
+  height: 34px;
+  background-color: #F00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+  -webkit-animation: blinkRed 0.5s infinite;
+  -moz-animation: blinkRed 0.5s infinite;
+  -ms-animation: blinkRed 0.5s infinite;
+  -o-animation: blinkRed 0.5s infinite;
+  animation: blinkRed 0.5s infinite;
+  position: absolute;
+  right: 200px;
+  top: 50px;
+}
+
+.led-green::before{
+  content: 'Subscribed';
+  font-weight: bold;
+  font-size: 1.7em;
+  margin-left: 50px;
+}
+
+.led-red::before{
+  content: 'Subscribed';
+  font-size: 1.7em;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+@-webkit-keyframes blinkRed {
+  from { background-color: #F00; }
+  50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+  to { background-color: #F00; }
+}
+@-moz-keyframes blinkRed {
+  from { background-color: #F00; }
+  50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+  to { background-color: #F00; }
+}
+@-ms-keyframes blinkRed {
+  from { background-color: #F00; }
+  50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+  to { background-color: #F00; }
+}
+@-o-keyframes blinkRed {
+  from { background-color: #F00; }
+  50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+  to { background-color: #F00; }
+}
+@keyframes blinkRed {
+  from { background-color: #F00; }
+  50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+  to { background-color: #F00; }
+}
+
+p {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-size: 2em;
+  color: #000000;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}

@@ -1,9 +1,9 @@
-import {Component, HostListener, Input, OnDestroy, OnInit} from "@angular/core";
+import {Component, HostListener,  OnDestroy, OnInit} from "@angular/core";
 import {Router} from "@angular/router";
 import {AlertService} from "../../service/alert.service";
 import {ModalService} from "../../service/modal/modal-service";
 import {IAlert} from "../../model/alert-model";
-import {interval, Observable, Subscription} from "rxjs";
+import {interval, Subscription} from "rxjs";
 
 
 @Component({
@@ -57,7 +57,7 @@ export class RawComponent implements OnInit,OnDestroy{
   }
 
   cancel(){
-    this.router.navigate(["/"])
+    this.router.navigate(["/home"])
   }
 
   ngOnInit() {
@@ -65,21 +65,19 @@ export class RawComponent implements OnInit,OnDestroy{
     this.sub = this.intervallTimer.subscribe(() => this.getAlerts());
     //this.alertService.getAlerts(this.url).subscribe((alerts:any[])=>{this.alerts = alerts});
     this.alerts = this.alertService.getAlertsArray(this.url);
-    console.log(this.url);
   }
   ngOnDestroy(){
     this.sub.unsubscribe();
   }
   getAlerts(){
     this.alerts = this.alertService.getAlertsArray(this.url);
-    console.log('hi');
   }
 
-  @HostListener('window:scroll', ['$event'])
+ /* @HostListener('window:scroll', ['$event'])
   updateAlerts(event){
-    //console.log('scrolling')
-    //this.alerts = this.alertService.getAlertsArray(this.url)
-  }
+    console.log('scrolling')
+    this.alerts = this.alertService.getAlertsArray(this.url)
+  }*/
 
   openModal(id: string, alert) {
     this.alert = JSON.stringify(alert);

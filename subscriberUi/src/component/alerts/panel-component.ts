@@ -48,13 +48,11 @@ export class PanelComponent implements OnInit {
   }
 
   cancel() {
-    this.router.navigate(["/"])
+    this.router.navigate(["/home"])
   }
 
   ngOnInit() {
-    console.log(this.route.snapshot.params['panel']);
     this.url = '/server/api/v1/alerts/panel/'.concat(this.route.snapshot.params['panel']);
-    console.log(this.url);
     this.alertService.getAlerts(this.url).subscribe((alerts: any[]) => {
       this.alerts = alerts
     });

@@ -4,3 +4,4 @@ application.log.2018-12-14.0.gz
 target/generated-sources/
 /.idea/
 /node_modules/
+subscriberUi/src/_content/

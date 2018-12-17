@@ -6,6 +6,7 @@ import {PanelComponent} from "../component/alerts/panel-component";
 import {SeverityComponent} from "../component/alerts/severity-component";
 import {Error404Component} from "../errors/404-component";
 import {RawComponent} from "../component/alerts/raw-component";
+import {HomeComponent} from "../component/alerts/home-component";
 
 
 const routes: Routes = [
@@ -14,7 +15,9 @@ const routes: Routes = [
   {path: 'panel/:panel', component:PanelComponent},
   {path: 'severity/:sev', component:SeverityComponent},
   {path: 'raw', component:RawComponent},
-  {path: '404', component:Error404Component}
+  {path: 'home', component:HomeComponent},
+  {path: '', component:HomeComponent},
+  {path: '**', component:Error404Component}
 ];
 
 @NgModule({

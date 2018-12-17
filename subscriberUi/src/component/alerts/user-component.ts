@@ -46,7 +46,7 @@ export class UserComponent implements OnInit{
 
   }
   cancel(){
-    this.router.navigate(["/"])
+    this.router.navigate(["/home"])
   }
 
   ngOnInit(){
