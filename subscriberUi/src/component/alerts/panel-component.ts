@@ -9,7 +9,7 @@ import {ModalService} from "../../service/modal/modal-service";
     <div>
       <h1>
         <jw-modal id="custom-modal-1" class="hidden">
-          <p> {{alert}} </p>
+          <pre><b> {{alert}} </b></pre>
           <button (click)="closeModal('custom-modal-1');">Close</button>
         </jw-modal>
         <div class="jw-modal-background"></div>
@@ -19,13 +19,13 @@ import {ModalService} from "../../service/modal/modal-service";
           <table class="table table-inverse table-bordered" border="1">
             <tr>
               <th>Severity</th>
-              <th>Description</th>
+              <th>Panel</th>
               <th>Location</th>
               <th>Access Allowed</th>
             </tr>
             <tr *ngFor="let alert of alerts">
               <td><a href="#" (click)="openModal('custom-modal-1',alert);false;">{{alert.severity}}</a></td>
-              <td>  {{alert.description}}  </td>
+              <td>  {{alert.currentEvent.panelId}}  </td>
               <td>  {{alert.currentEvent.location.relativeLocation}}</td>
               <td>  {{alert.currentEvent.accessAllowed}}</td>
             </tr>
@@ -59,7 +59,7 @@ export class PanelComponent implements OnInit {
   }
 
   openModal(id: string, alert) {
-    this.alert = JSON.stringify(alert);
+    this.alert=JSON.stringify(alert,undefined,2);
     //this.alert = alert.toString();
     console.log(JSON.stringify(alert));
     this.modalService.open(id);
