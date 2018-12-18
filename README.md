@@ -10,7 +10,7 @@ Uses spring boot rest controllers for backend and uses Angular web app for UI.
 
 Can search using location, user, 
 
-##Building from source
+## Building from source
 
 ### Prerequisites 
 1. Install [Maven 3]( https://maven.apache.org/)
@@ -19,9 +19,9 @@ Can search using location, user,
 
 
 
-###Running the webservice on your local machine
+### Running the webservice on your local machine
 mvnw spring-boot:run
 
-###Running the web app on your local machine
+### Running the web app on your local machine
 1. npm install
 2. npm start
