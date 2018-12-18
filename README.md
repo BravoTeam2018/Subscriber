@@ -23,5 +23,6 @@ Can search using location, user,
 mvnw spring-boot:run
 
 ### Running the web app on your local machine
-1. npm install
-2. npm start
+1. navigate to prject folder
+2. npm install
+3. npm start
