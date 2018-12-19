@@ -23,6 +23,6 @@ Can search using location, user,
 mvnw spring-boot:run
 
 ### Running the web app on your local machine
-1. navigate to project folder
+1. navigate to project folder subscriberUi
 2. npm install
 3. npm start
